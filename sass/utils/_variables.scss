@@ -1,0 +1,25 @@
+//палитра
+//чёрний основной #000000
+//дополнительный чёрний #212121
+//цвет фона hero и footer #2F303A
+//белый цвет #FFFFFF
+//акцент цвет #2196F3
+//акцент сёрый #757575
+//фон чем мы занимаемся #E5E5E5
+//цвет кнопок портфолио #f5f4fa
+//цвет иконок соцсетей #AFB1B8
+
+:root {
+  --primary-text-color: #000000;
+  --primary-accent-color: #2196f3;
+  --secondary-text-color: #212121;
+  --secondary-accent-color: #757575;
+  --primary-white-color: #ffffff;
+  --hero-background-color: #c4c4c4;
+  --portfolio-button-bgc: #f5f4fa;
+  --primary-bgc-color: #e5e5e5;
+  --card-description-border-color: #eeeeee;
+  --header-border-color: #ececec;
+  --bg-footer-color: #2f303a;
+  --social-icon-color: #afb1b8;
+}

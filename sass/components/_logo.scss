@@ -1,0 +1,15 @@
+.logo {
+  color: var(--primary-text-color);
+
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+
+  & .first-part-logo {
+    color: var(--primary-accent-color);
+  }
+  &-footer {
+    color: var(--primary-white-color);
+  }
+}
