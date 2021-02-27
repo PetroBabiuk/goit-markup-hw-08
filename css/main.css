@@ -267,11 +267,11 @@ ol {
   transform: translateY(-100%);
 }
 
-.head {
+.header {
   border-bottom: 1px solid var(--header-border-color);
 }
 
-.header {
+.header .container {
   display: flex;
 }
 
