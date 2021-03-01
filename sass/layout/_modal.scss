@@ -22,8 +22,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 450px;
+  min-height: 609px;
   padding: 40px;
 
   background-color: #ffffff;
@@ -59,11 +59,13 @@
   width: 18px;
   height: 18px;
 }
+
 .form {
   position: absolute;
 
   &-title {
     display: block;
+    width: 370px;
     margin-bottom: 12px;
     font-size: 20px;
     line-height: 1.15;
@@ -108,7 +110,7 @@
 
 .form-input {
   padding-left: 42px;
-  min-width: 448px;
+  min-width: 370px;
   min-height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -127,7 +129,7 @@
 .form-coment {
   resize: none;
   padding: 12px 16px;
-  min-width: 448px;
+  min-width: 370px;
   min-height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -144,17 +146,17 @@
 .label-checkbox {
   position: relative;
   display: block;
-  padding-left: 35px;
-  font-size: 14px;
-  line-height: 1.71;
+  padding-left: 24px;
+  font-size: 12px;
+  line-height: 1.667;
   letter-spacing: 0.03em;
 
   color: var(--secondary-accent-color);
 
   &::after {
     position: absolute;
-    left: 12px;
-    top: 5px;
+    left: 0;
+    top: 3px;
     content: ' ';
     display: inline-block;
     width: 16px;
@@ -189,10 +191,43 @@
 
 .agreement {
   display: inline-block;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
 
   color: var(--primary-accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+    padding: 40px;
+  }
+  .form {
+    &-title {
+      width: 448px;
+    }
+    &-input,
+    &-coment {
+      min-width: 448px;
+    }
+  }
+
+  .label-checkbox {
+    padding-left: 35px;
+    font-size: 14px;
+    line-height: 1.71;
+
+    &::after {
+      left: 12px;
+      top: 5px;
+    }
+  }
+
+  .agreement {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }

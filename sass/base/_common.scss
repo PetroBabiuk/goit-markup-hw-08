@@ -5,11 +5,6 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
 }
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 h1,
 h2,
 h3,
@@ -19,12 +14,23 @@ h6,
 p {
   margin: 0;
 }
+
 ul,
 ol {
   margin: 0;
   padding: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .list {
   list-style: none;
+}
+
+.link {
+  text-decoration: none;
 }

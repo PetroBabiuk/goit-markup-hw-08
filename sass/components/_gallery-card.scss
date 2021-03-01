@@ -1,7 +1,8 @@
 .card {
-  display: flex;
-  margin: -15px;
-  flex-wrap: wrap;
+  &-img {
+    width: 450px;
+    height: 294px;
+  }
 
   &.title {
     margin-bottom: 4px;
@@ -11,6 +12,7 @@
     font-size: 18px;
     line-height: 2;
     text-decoration: none;
+    letter-spacing: 0.06em;
   }
 
   &-text {
@@ -22,8 +24,10 @@
   }
 
   &-item {
-    margin: 15px;
-    width: 370px;
+    width: 100%;
+  }
+  & .item + .item {
+    margin-top: 30px;
   }
 
   &-description {
@@ -35,7 +39,7 @@
   }
 
   &-thumb {
-    width: 370px;
+    width: 450px;
     height: 294px;
     overflow: hidden;
   }
@@ -66,7 +70,33 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 
-  &:hover .card-overlay {
+  &:hover .card-overlay,
+  &:focus .card-overlay {
     transform: translateY(-100%);
+  }
+}
+@media screen and (min-width: 768px) {
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+
+    &-item {
+      width: 354px;
+      margin: 15px;
+    }
+
+    & .item + .item {
+      margin-top: 0;
+    }
+    &-img {
+      width: 354px;
+      height: 294px;
+    }
+    &-thumb {
+      width: 354px;
+      height: 294px;
+      overflow: hidden;
+    }
   }
 }
