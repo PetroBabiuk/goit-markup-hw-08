@@ -138,7 +138,7 @@ img {
     line-height: 1.17;
   }
   .what-we-do .section-title {
-    display: block;
+    margin-bottom: 50px;
   }
 }
 
@@ -275,7 +275,7 @@ img {
   height: 294px;
 }
 
-.card.title {
+.card-title {
   margin-bottom: 4px;
   color: var(--secondary-text-color);
   font-weight: 700;
