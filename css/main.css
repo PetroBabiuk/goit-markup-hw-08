@@ -218,7 +218,7 @@ img {
 
 .button-modal {
   display: block;
-  margin: 30px auto 0 auto;
+  margin: 30px auto;
   background-color: #188ce8;
 }
 
@@ -1115,8 +1115,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 450px;
-  min-height: 609px;
+  min-width: 320px;
+  min-height: 100vh;
   padding: 40px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1149,13 +1149,9 @@ img {
   height: 18px;
 }
 
-.form {
-  position: absolute;
-}
-
 .form-title {
   display: block;
-  width: 370px;
+  width: 100%;
   margin-bottom: 12px;
   font-size: 20px;
   line-height: 1.15;
@@ -1197,7 +1193,7 @@ img {
 
 .form-input {
   padding-left: 42px;
-  min-width: 370px;
+  min-width: 100%;
   min-height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1214,9 +1210,9 @@ img {
 }
 
 .form-coment {
-  resize: none;
+  resize: unset;
   padding: 12px 16px;
-  min-width: 370px;
+  min-width: 100%;
   min-height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1281,6 +1277,13 @@ img {
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: var(--primary-accent-color);
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    min-width: 480px;
+    min-height: 609px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
