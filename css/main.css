@@ -224,15 +224,15 @@ img {
 
 .buttons-list {
   display: flex;
-  height: 91px;
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: start;
   margin-bottom: 30px;
+  margin: -8px -4px;
 }
 
-.buttons-list .item:not(:nth-child(3n + 1)) {
-  margin-left: 8px;
+.buttons-list .item {
+  margin: 8px 4px;
 }
 
 .nav-button {
@@ -270,11 +270,6 @@ img {
   }
 }
 
-.card-img {
-  width: 450px;
-  height: 294px;
-}
-
 .card-title {
   margin-bottom: 4px;
   color: var(--secondary-text-color);
@@ -294,31 +289,28 @@ img {
 
 .card-item {
   width: 100%;
-}
-
-.card .item + .item {
   margin-top: 30px;
 }
 
 .card-description {
   background-color: var(--primary-white-color);
   padding: 20px 24px;
-  border-left: 1px solid var(--card-description-border-color);
-  border-right: 1px solid var(--card-description-border-color);
-  border-bottom: 1px solid var(--card-description-border-color);
 }
 
 .card-thumb {
-  width: 450px;
-  height: 294px;
+  position: relative;
   overflow: hidden;
 }
 
 .card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
   width: 100%;
   height: 100%;
-  padding: 63px 24px;
-  font-size: 18px;
+  padding: 15px 20px;
+  font-size: 14px;
   line-height: 1.56;
   color: #ffffff;
   background-color: #2196f3e6;
@@ -327,7 +319,12 @@ img {
 
 .card-link {
   display: block;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
+  border-left: 1px solid var(--card-description-border-color);
+  border-right: 1px solid var(--card-description-border-color);
+  border-bottom: 1px solid var(--card-description-border-color);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -337,7 +334,14 @@ img {
 
 .card-link:hover .card-overlay,
 .card-link:focus .card-overlay {
-  transform: translateY(-100%);
+  transform: translateY(0);
+}
+
+@media screen and (min-width: 480px) {
+  .card-overlay {
+    padding: 77px 24px;
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -349,6 +353,9 @@ img {
   .card-item {
     width: 354px;
     margin: 15px;
+  }
+  .card .item {
+    margin-top: 0;
   }
   .card .item + .item {
     margin-top: 0;
@@ -362,12 +369,31 @@ img {
     height: 294px;
     overflow: hidden;
   }
+  .card-overlay {
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card-item {
+    width: 370px;
+  }
+  .card-img {
+    width: 370px;
+  }
+  .card-thumb {
+    width: 370px;
+  }
+  .card-overlay {
+    padding: 63px 24px;
+  }
 }
 
 .mobile-menu {
   position: absolute;
   top: 0;
   left: 50%;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1096,6 +1122,7 @@ img {
   top: 0px;
   width: 100%;
   height: 100%;
+  padding: 93px 15px;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1115,9 +1142,9 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 320px;
-  min-height: 100vh;
-  padding: 40px;
+  width: 100%;
+  max-width: 290px;
+  padding: 40px 10px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1281,8 +1308,8 @@ img {
 
 @media screen and (min-width: 480px) {
   .modal {
-    min-width: 480px;
-    min-height: 609px;
+    max-width: 450px;
+    padding: 40px;
   }
 }
 
@@ -1290,13 +1317,6 @@ img {
   .modal {
     min-width: 528px;
     min-height: 581px;
-    padding: 40px;
-  }
-  .form-title {
-    width: 448px;
-  }
-  .form-input, .form-coment {
-    min-width: 448px;
   }
   .label-checkbox {
     padding-left: 35px;

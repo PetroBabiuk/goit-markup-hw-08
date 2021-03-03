@@ -1,9 +1,4 @@
 .card {
-  &-img {
-    width: 450px;
-    height: 294px;
-  }
-
   &-title {
     margin-bottom: 4px;
     color: var(--secondary-text-color);
@@ -25,30 +20,28 @@
 
   &-item {
     width: 100%;
-  }
-  & .item + .item {
     margin-top: 30px;
   }
 
   &-description {
     background-color: var(--primary-white-color);
     padding: 20px 24px;
-    border-left: 1px solid var(--card-description-border-color);
-    border-right: 1px solid var(--card-description-border-color);
-    border-bottom: 1px solid var(--card-description-border-color);
   }
 
   &-thumb {
-    width: 450px;
-    height: 294px;
+    position: relative;
     overflow: hidden;
   }
 
   &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
     width: 100%;
     height: 100%;
-    padding: 63px 24px;
-    font-size: 18px;
+    padding: 15px 20px;
+    font-size: 14px;
     line-height: 1.56;
 
     color: #ffffff;
@@ -60,7 +53,12 @@
 
 .card-link {
   display: block;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
+  border-left: 1px solid var(--card-description-border-color);
+  border-right: 1px solid var(--card-description-border-color);
+  border-bottom: 1px solid var(--card-description-border-color);
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -72,7 +70,15 @@
 
   &:hover .card-overlay,
   &:focus .card-overlay {
-    transform: translateY(-100%);
+    transform: translateY(0);
+  }
+}
+@media screen and (min-width: 480px) {
+  .card {
+    &-overlay {
+      padding: 77px 24px;
+      font-size: 18px;
+    }
   }
 }
 @media screen and (min-width: 768px) {
@@ -86,6 +92,9 @@
       margin: 15px;
     }
 
+    & .item {
+      margin-top: 0;
+    }
     & .item + .item {
       margin-top: 0;
     }
@@ -97,6 +106,25 @@
       width: 354px;
       height: 294px;
       overflow: hidden;
+    }
+    &-overlay {
+      padding: 49px 24px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card {
+    &-item {
+      width: 370px;
+    }
+    &-img {
+      width: 370px;
+    }
+    &-thumb {
+      width: 370px;
+    }
+    &-overlay {
+      padding: 63px 24px;
     }
   }
 }

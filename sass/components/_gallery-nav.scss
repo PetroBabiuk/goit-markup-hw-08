@@ -1,13 +1,13 @@
 .buttons-list {
   display: flex;
-  height: 91px;
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: start;
   margin-bottom: 30px;
+  margin: -8px -4px;
 
-  & .item:not(:nth-child(3n + 1)) {
-    margin-left: 8px;
+  & .item {
+    margin: 8px 4px;
   }
 }
 
