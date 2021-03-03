@@ -4,6 +4,7 @@
 }
 .features {
   padding-top: 60px;
+  padding-bottom: 60px;
 
   &__title {
     color: var(--secondary-text-color);
@@ -71,6 +72,7 @@
 
   .features {
     padding-top: 94px;
+    padding-bottom: 0px;
 
     &__svg {
       display: flex;

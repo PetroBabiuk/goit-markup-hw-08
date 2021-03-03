@@ -747,6 +747,7 @@ img {
 
 .features {
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .features__title {
@@ -810,6 +811,7 @@ img {
   }
   .features {
     padding-top: 94px;
+    padding-bottom: 0px;
   }
   .features__svg {
     display: flex;
@@ -834,7 +836,7 @@ img {
   }
 }
 
-.what-we-do {
+.what-we-do-section {
   display: none;
 }
 
@@ -842,6 +844,9 @@ img {
   .what-we-do {
     display: flex;
     margin-top: 50px;
+  }
+  .what-we-do-section {
+    display: block;
   }
   .what-we-do .item + .item {
     margin-left: 30px;
@@ -912,7 +917,7 @@ img {
     flex-wrap: wrap;
     margin: 0 -15px;
   }
-  .our-team-list .item {
+  .our-team-list > .item {
     width: 354px;
     margin-left: 15px;
     margin-right: 15px;
@@ -928,7 +933,7 @@ img {
     display: flex;
     margin-top: 50px;
   }
-  .our-team-list .item {
+  .our-team-list > .item {
     width: 270px;
   }
   .our-team-list > .item + .item {
