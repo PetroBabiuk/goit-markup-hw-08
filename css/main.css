@@ -354,12 +354,6 @@ img {
     width: 354px;
     margin: 15px;
   }
-  .card .item {
-    margin-top: 0;
-  }
-  .card .item + .item {
-    margin-top: 0;
-  }
   .card-img {
     width: 354px;
     height: 294px;
@@ -397,8 +391,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
-  max-width: 480px;
+  width: 100vw;
+  max-width: 767px;
   height: 100vh;
   padding-left: 40px;
   padding-right: 40px;
